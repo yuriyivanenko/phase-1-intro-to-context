@@ -9,13 +9,7 @@ const createEmployeeRecord = (employee) => {
   }
 }
 
-const createEmployeeRecords = (records) => {
-  const recordsArray = []
-  records.map(record => {
-    recordsArray.push(createEmployeeRecord(record))
-  })
-  return recordsArray
-}
+const createEmployeeRecords = (records) => records.map(record => createEmployeeRecord(record))
 
 const createTimeInEvent = (employeeRecord, event) => {
   employeeRecord.timeInEvents.push({
